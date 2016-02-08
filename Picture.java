@@ -37,12 +37,12 @@ public class Picture
         roof.makeVisible();
 
         person1 = new Person();
-        person1.changeColor("brown");
+        person1.changeColor("black");
         person1.moveVertical(-55);
         person1.makeVisible();
         
         person2 = new Person();
-        person2.changeColor("brown");
+        person2.changeColor("black");
         person2.moveVertical(-55);
         person2.moveHorizontal(-35);
         person2.makeVisible();
@@ -57,8 +57,8 @@ public class Picture
         {
             house.changeColor("black");
             roof.changeColor("black");
-            person1.changeColor("orange");
-            person2.changeColor("brown");
+            person1.changeColor("black");
+            person2.changeColor("black");
         }
     }
 
@@ -71,8 +71,8 @@ public class Picture
         {
             house.changeColor("red");
             roof.changeColor("green");
-            person1.changeColor("orange");
-            person2.changeColor("orange");
+            person1.changeColor("black");
+            person2.changeColor("black");
         }
     }
 }
