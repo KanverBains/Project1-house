@@ -6,15 +6,14 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Michael Kolling and David J. Barnes
  * @version 2011.07.31
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
+    private Square house;
     private Triangle roof;
-    private Circle sun;
+    private Person person1, person2;
 
     /**
      * Constructor for objects of class Picture
@@ -29,31 +28,24 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
-        
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
+        house = new Square();
+        house.makeVisible();
 
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
+        roof = new Triangle();
+        roof.moveHorizontal(129);
+        roof.moveVertical(-80);
         roof.makeVisible();
 
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
+        person1 = new Person();
+        person1.changeColor("brown");
+        person1.moveVertical(-55);
+        person1.makeVisible();
+        
+        person2 = new Person();
+        person2.changeColor("brown");
+        person2.moveVertical(-55);
+        person2.moveHorizontal(-35);
+        person2.makeVisible();
     }
 
     /**
@@ -61,12 +53,12 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        if (wall != null)   // only if it's painted already...
+        if (house != null)   // only if it's painted already...
         {
-            wall.changeColor("black");
-            window.changeColor("white");
+            house.changeColor("black");
             roof.changeColor("black");
-            sun.changeColor("black");
+            person1.changeColor("orange");
+            person2.changeColor("brown");
         }
     }
 
@@ -75,12 +67,12 @@ public class Picture
      */
     public void setColor()
     {
-        if (wall != null)   // only if it's painted already...
+        if (house != null)   // only if it's painted already...
         {
-            wall.changeColor("red");
-            window.changeColor("black");
+            house.changeColor("red");
             roof.changeColor("green");
-            sun.changeColor("yellow");
+            person1.changeColor("orange");
+            person2.changeColor("orange");
         }
     }
 }
